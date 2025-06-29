@@ -1,0 +1,12 @@
+2025-06-23 16:27:51.777 [info] 
+
+
+
+
+2025-06-23 16:27:51.813 [info] Extension host agent started.
+2025-06-23 16:27:55.539 [info] [127.0.0.1][4820e138][ManagementConnection] New connection established.
+2025-06-23 16:27:55.597 [info] [127.0.0.1][c5306d88][ExtensionHostConnection] New connection established.
+2025-06-23 16:27:56.465 [info] [127.0.0.1][c5306d88][ExtensionHostConnection] <1247> Launched Extension Host Process.
+2025-06-23 17:51:18.672 [info] [127.0.0.1][c5306d88][ExtensionHostConnection] The client has reconnected.
+2025-06-23 17:51:18.750 [info] [127.0.0.1][4820e138][ManagementConnection] The client has reconnected.
+2025-06-23 18:08:31.706 [info] [127.0.0.1][4820e138][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...

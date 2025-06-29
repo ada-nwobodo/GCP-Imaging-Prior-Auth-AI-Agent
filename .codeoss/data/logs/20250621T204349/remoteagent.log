@@ -1,0 +1,30 @@
+2025-06-21 20:43:49.821 [info] 
+
+
+
+
+2025-06-21 20:43:49.835 [info] Extension host agent started.
+2025-06-21 20:43:49.850 [info] Started initializing default profile extensions in extensions installation folder. file:///home/aikonhealthuk/.codeoss/extensions
+2025-06-21 20:43:49.863 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/aikonhealthuk/.codeoss/extensions
+2025-06-21 20:43:53.598 [info] [127.0.0.1][35bef28c][ManagementConnection] New connection established.
+2025-06-21 20:43:53.600 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] New connection established.
+2025-06-21 20:43:55.252 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] <2105> Launched Extension Host Process.
+2025-06-21 21:11:32.008 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] The client has reconnected.
+2025-06-21 21:11:32.376 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has reconnected.
+2025-06-21 21:38:07.787 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] The client has reconnected.
+2025-06-21 21:38:07.976 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has reconnected.
+2025-06-21 22:07:37.580 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] The client has reconnected.
+2025-06-21 22:07:50.396 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has reconnected.
+2025-06-21 22:25:02.337 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-06-21 22:36:40.078 [info] [127.0.0.1][35bef28c][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2025-06-21 22:36:40.078 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has reconnected.
+2025-06-21 22:36:43.319 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] The client has reconnected.
+2025-06-21 22:57:41.063 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-06-21 22:58:32.673 [info] [127.0.0.1][35bef28c][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2025-06-21 22:58:32.674 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has reconnected.
+2025-06-21 22:58:32.746 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] The client has reconnected.
+2025-06-21 23:18:37.696 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-06-21 23:18:39.777 [info] [127.0.0.1][35bef28c][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2025-06-21 23:18:39.778 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has reconnected.
+2025-06-21 23:18:39.780 [info] [127.0.0.1][f9ef7b58][ExtensionHostConnection] The client has reconnected.
+2025-06-21 23:39:43.360 [info] [127.0.0.1][35bef28c][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
