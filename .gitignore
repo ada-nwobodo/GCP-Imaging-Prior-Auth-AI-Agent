@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Python virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# Local user environment and configs
+.local/
+.gitconfig
+.bash_history
+
+# Logs
+*.log
+.npm/_logs/
+.codeoss/data/logs/
+
+# Cache and temporary files
+.cache/
+*.tmp
+*.temp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+
+# Git backup folder (if you want to ignore)
+git-backup/
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Streamlit secrets (do NOT commit your secrets)
+.secrets.toml
+git-backup/
+
+#MacOS files 
+.DS_Store
+
+# Windows files 
+Thumbs.db
+
+# Streamlit secrets(do NOT commit your secrets)
+.secrets.toml
+
+# Replacements
+replacements.txt
+
+# Bash history
+.bash_history
