@@ -25,7 +25,7 @@ GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY")
 
 #Check if key is loaded
 if not GOOGLE_API_KEY:
-	st.error("Google API key is missing! Please add it in Streamlit secrets)
+	st.error("Google API key is missing! Please add it in Streamlit secrets")
 	st.stop()
 
 from langchain_core.messages import HumanMessage
