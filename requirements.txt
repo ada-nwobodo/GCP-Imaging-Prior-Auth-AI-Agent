@@ -54,6 +54,7 @@ grpcio-status==1.71.0
 
 
 langchain-core
+langchain-google-vertexai
 
 streamlit==1.46.1
 streamlit-feedback
