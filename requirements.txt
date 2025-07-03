@@ -1,5 +1,5 @@
 # Core app dependencies
-streamlit==1.35.0
+streamlit==1.46.1
 
 # Utility packages (add/remove based on usage)
 numpy>=1.21
