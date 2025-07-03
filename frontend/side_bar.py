@@ -72,7 +72,7 @@ class SideBar:
                 )
 
     #  Line added here to print the path in the Streamlit UI
-    self.st.write(f"Agent Callable Path: {self.agent_callable_path}")
+                self.st.write(f"Agent Callable Path: {self.agent_callable_path}")
     
                 self.remote_agent_engine_id = None
                 self.url_input_field = None
