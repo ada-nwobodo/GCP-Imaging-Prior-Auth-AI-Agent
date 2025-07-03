@@ -23,7 +23,7 @@ astunparse==1.6.3
 attrs==25.3.0
 autopep8==1.5.5
 
-
+langchain-core
 
 
 
