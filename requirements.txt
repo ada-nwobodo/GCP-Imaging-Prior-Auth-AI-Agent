@@ -25,6 +25,7 @@ autopep8==1.5.5
 
 langchain-core
 
+streamlit==1.46.1
 streamlit-feedback
 
 
