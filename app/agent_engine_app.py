@@ -22,6 +22,7 @@ from typing import (
     Any,
 )
 
+import streamlit as st
 import google.auth
 import vertexai
 from google.cloud import logging as google_cloud_logging
@@ -52,6 +53,7 @@ class AgentEngineApp:
         # Initialize Telemetry
         try:
             Traceloop.init(
+                api_key=st.secrets["traceloop"]["api_key"]
                 app_name="my-imaging-agent",
                 disable_batch=False,
                 exporter=CloudTraceLoggingSpanExporter(project_id=self.project_id),
