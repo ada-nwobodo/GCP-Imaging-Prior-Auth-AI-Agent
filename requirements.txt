@@ -59,4 +59,5 @@ langchain-google-vertexai
 streamlit==1.46.1
 streamlit-feedback
 
+traceloop
 
