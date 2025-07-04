@@ -73,6 +73,9 @@ class SideBar:
                         "AGENT_CALLABLE_PATH", DEFAULT_AGENT_CALLABLE_PATH
                     ),
                 )
+            else:
+                #Handle other agent types if necessary
+                self.agent_callable_path = None
 
     #  Line added here to print the path in the Streamlit UI
                 self.st.write(f"Agent Callable Path: {self.agent_callable_path}")
