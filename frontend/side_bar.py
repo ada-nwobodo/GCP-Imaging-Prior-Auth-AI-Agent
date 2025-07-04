@@ -64,7 +64,7 @@ class SideBar:
             )
             
         # Debug line to see if "Local Agent" path is selected, being run at all & code reaching place for agent_callable_path gets assigned
-        self.st.write(f"Use agent path selected: {use_agent_path}")
+            self.st.write(f"Use agent path selected: {use_agent_path}")
 
             if use_agent_path == "Local Agent":
                 self.agent_callable_path = self.st.text_input(
