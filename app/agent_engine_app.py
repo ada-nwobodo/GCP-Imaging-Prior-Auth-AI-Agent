@@ -27,7 +27,7 @@ import google.auth
 import vertexai
 from google.cloud import logging as google_cloud_logging
 from langchain_core.runnables import RunnableConfig
-from traceloop.sdk import Instruments, Traceloop
+# from traceloop.sdk import Instruments, Traceloop
 from vertexai import agent_engines
 
 from app.utils.gcs import create_bucket_if_not_exists
@@ -51,49 +51,49 @@ class AgentEngineApp:
         self.logger = logging_client.logger(__name__)
 
         # Initialize Telemetry
-        try:
-            Traceloop.init(
-                api_key=st.secrets["traceloop"]["api_key"]
-                app_name="my-imaging-agent",
-                disable_batch=False,
-                exporter=CloudTraceLoggingSpanExporter(project_id=self.project_id),
-                instruments={Instruments.LANGCHAIN, Instruments.CREW},
-            )
-        except Exception as e:
-            logging.error("Failed to initialize Telemetry: %s", str(e))
-        self.runnable = agent
+#        try:
+#            Traceloop.init(
+#                api_key=st.secrets["traceloop"]["api_key"]
+#                app_name="my-imaging-agent",
+#                disable_batch=False,
+#                exporter=CloudTraceLoggingSpanExporter(project_id=self.project_id),
+#                instruments={Instruments.LANGCHAIN, Instruments.CREW},
+#            )
+#        except Exception as e:
+#            logging.error("Failed to initialize Telemetry: %s", str(e))
+#        self.runnable = agent
 
     # Add any additional variables here that should be included in the tracing logs
-    def set_tracing_properties(self, config: RunnableConfig | None) -> None:
-        """Sets tracing association properties for the current request.
-
-        Args:
-            config: Optional RunnableConfig containing request metadata
-        """
-        config = ensure_valid_config(config)
-        Traceloop.set_association_properties(
-            {
-                "log_type": "tracing",
-                "run_id": str(config["run_id"]),
-                "user_id": config["metadata"].pop("user_id", "None"),
-                "session_id": config["metadata"].pop("session_id", "None"),
-                "commit_sha": os.environ.get("COMMIT_SHA", "None"),
-            }
-        )
-
-    def stream_query(
-        self,
-        *,
-        input: str | Mapping,
-        config: RunnableConfig | None = None,
-        **kwargs: Any,
-    ) -> Iterable[Any]:
-        """Stream responses from the agent for a given input."""
-
-        config = ensure_valid_config(config)
-        self.set_tracing_properties(config=config)
+#    def set_tracing_properties(self, config: RunnableConfig | None) -> None:
+#        """Sets tracing association properties for the current request.
+#
+#        Args:
+#            config: Optional RunnableConfig containing request metadata
+#       """
+#        config = ensure_valid_config(config)
+#        Traceloop.set_association_properties(
+#            {
+#                "log_type": "tracing",
+#                "run_id": str(config["run_id"]),
+#                "user_id": config["metadata"].pop("user_id", "None"),
+#                "session_id": config["metadata"].pop("session_id", "None"),
+#                "commit_sha": os.environ.get("COMMIT_SHA", "None"),
+#            }
+#        )
+#
+     def stream_query(
+         self,
+         *,
+         input: str | Mapping,
+         config: RunnableConfig | None = None,
+         **kwargs: Any,
+     ) -> Iterable[Any]:
+         """Stream responses from the agent for a given input."""
+ 
+         config = ensure_valid_config(config)
+	 self.set_tracing_properties(config=config)
         # Validate input. We assert the input is a list of messages
-        input_chat = InputChat.model_validate(input)
+ 	input_chat = InputChat.model_validate(input)
 
         for chunk in self.runnable.stream(
             input=input_chat, config=config, **kwargs, stream_mode="messages"
