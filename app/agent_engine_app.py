@@ -81,25 +81,25 @@ class AgentEngineApp:
 #            }
 #        )
 #
-     def stream_query(
-         self,
-         *,
-         input: str | Mapping,
-         config: RunnableConfig | None = None,
-         **kwargs: Any,
-     ) -> Iterable[Any]:
-         """Stream responses from the agent for a given input."""
- 
-         config = ensure_valid_config(config)
-	 self.set_tracing_properties(config=config)
-        # Validate input. We assert the input is a list of messages
- 	input_chat = InputChat.model_validate(input)
+def stream_query(
+    self,
+    *,
+    input: str | Mapping,
+    config: RunnableConfig | None = None,
+    **kwargs: Any,
+) -> Iterable[Any]:
+    """Stream responses from the agent for a given input."""
 
-        for chunk in self.runnable.stream(
-            input=input_chat, config=config, **kwargs, stream_mode="messages"
-        ):
-            dumped_chunk = dumpd(chunk)
-            yield dumped_chunk
+    config = ensure_valid_config(config)
+    self.set_tracing_properties(config=config)
+    # Validate input. We assert the input is a list of messages
+    input_chat = InputChat.model_validate(input)
+
+    for chunk in self.runnable.stream(
+        input=input_chat, config=config, **kwargs, stream_mode="messages"
+    ):
+        dumped_chunk = dumpd(chunk)
+        yield dumped_chunk
 
     def query(
         self,
