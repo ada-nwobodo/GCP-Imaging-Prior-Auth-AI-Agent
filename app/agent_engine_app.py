@@ -31,7 +31,7 @@ from langchain_core.runnables import RunnableConfig
 from vertexai import agent_engines
 
 from app.utils.gcs import create_bucket_if_not_exists
-from app.utils.tracing import CloudTraceLoggingSpanExporter
+#from app.utils.tracing import CloudTraceLoggingSpanExporter
 from app.utils.typing import Feedback, InputChat, dumpd, ensure_valid_config
 
 
