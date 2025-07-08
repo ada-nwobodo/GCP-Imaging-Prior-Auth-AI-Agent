@@ -47,6 +47,12 @@ class AgentEngineApp:
         # Lazy import agent at setup time to avoid deployment dependencies
         from app.agent import agent
 
+        import os
+        import google.cloud.logging as google_cloud_logging
+
+        #Use explicit fallback for project ID
+        project_id = getattr(self, "project_id", None) or os.getenv("GCP_PROJECT") or "weighty-nation-463615-h5"
+
         logging_client = google_cloud_logging.Client(project=self.project_id)
         self.logger = logging_client.logger(__name__)
 
