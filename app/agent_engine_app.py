@@ -53,7 +53,11 @@ class AgentEngineApp:
         #Use explicit fallback for project ID
         project_id = getattr(self, "project_id", None) or os.getenv("GCP_PROJECT") or "weighty-nation-463615-h5"
 
-        logging_client = google_cloud_logging.Client(project=self.project_id)
+        #Debut log to verify which project ID is being used
+        print(f"[DEBUG] Using project_id: {project_id}")
+
+        #Initialise Google Cloud Logging with resolved project ID
+        logging_client = google_cloud_logging.Client(project=project_id)
         self.logger = logging_client.logger(__name__)
 
         # Initialize Telemetry
