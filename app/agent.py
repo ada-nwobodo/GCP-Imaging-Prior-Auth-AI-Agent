@@ -16,9 +16,12 @@
 from langchain_core.messages import BaseMessage
 from langchain_core.runnables import RunnableConfig
 from langchain_core.tools import tool
+from vertexai import init
 from langchain_google_vertexai import ChatVertexAI
 from langgraph.graph import END, MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
+
+init(project="weighty-nation-463615-h5", location="us-central1")
 
 LOCATION = "global"
 LLM = "gemini-2.0-flash-001"
