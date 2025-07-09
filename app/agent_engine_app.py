@@ -71,7 +71,7 @@ class AgentEngineApp:
 #            )
 #        except Exception as e:
 #            logging.error("Failed to initialize Telemetry: %s", str(e))
-         self.runnable = agent
+        self.runnable = agent
 
     # Add any additional variables here that should be included in the tracing logs
 #    def set_tracing_properties(self, config: RunnableConfig | None) -> None:
