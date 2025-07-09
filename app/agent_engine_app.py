@@ -101,8 +101,8 @@ class AgentEngineApp:
         """Stream responses from the agent for a given input."""
 
         config = ensure_valid_config(config)
-        self.set_tracing_properties(config=config)
-    # Validate input. We assert the input is a list of messages
+    #   self.set_tracing_properties(config=config)
+    #   Validate input. We assert the input is a list of messages
         input_chat = InputChat.model_validate(input)
 
         for chunk in self.runnable.stream(
@@ -120,7 +120,7 @@ class AgentEngineApp:
     ) -> Any:
         """Process a single input and return the agent's response."""
         config = ensure_valid_config(config)
-        self.set_tracing_properties(config=config)
+   #    self.set_tracing_properties(config=config)
         return dumpd(self.runnable.invoke(input=input, config=config, **kwargs))
 
     def register_feedback(self, feedback: dict[str, Any]) -> None:
