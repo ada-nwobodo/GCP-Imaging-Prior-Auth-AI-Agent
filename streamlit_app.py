@@ -29,7 +29,7 @@ GOOGLE_APPLICATION_CREDENTIALS_JSON = st.secrets["GOOGLE_APPLICATION_CREDENTIALS
 
 #Step 2: Writing it to a temporary file
 with open("/tmp/creds.json", "w") as f:
-	f.write(creds_json)
+    f.write(creds_json)
 
  #Step 3: Setting the environment variable for Google Cloud SDKs to use
  os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/creds.json"
