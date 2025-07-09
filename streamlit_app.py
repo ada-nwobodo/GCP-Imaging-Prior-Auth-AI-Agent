@@ -32,7 +32,7 @@ with open("/tmp/creds.json", "w") as f:
     f.write(creds_json)
 
  #Step 3: Setting the environment variable for Google Cloud SDKs to use
- os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/creds.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/creds.json"
 
 
 #Check if key is loaded
