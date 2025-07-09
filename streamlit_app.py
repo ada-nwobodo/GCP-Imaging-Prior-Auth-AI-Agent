@@ -23,6 +23,9 @@ import streamlit as st
 
 GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY")
 
+#Get JSON string from Streamlit secretes
+GOOGLE_APPLICATION_CREDENTIALS_JSON = st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"]
+
 #Check if key is loaded
 if not GOOGLE_API_KEY:
 	st.error("Google API key is missing! Please add it in Streamlit secrets")
