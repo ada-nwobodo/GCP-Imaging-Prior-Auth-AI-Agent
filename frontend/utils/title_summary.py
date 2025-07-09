@@ -79,7 +79,7 @@ try:
         model_name="gemini-2.0-flash-001",
         temperature=0,
         project=project_id,
-        location=os.getenv("LOCATION", "europe-west2"),
+        location=os.getenv("LOCATION", "us-central1"),
     )
     chain_title = title_template | llm
 
