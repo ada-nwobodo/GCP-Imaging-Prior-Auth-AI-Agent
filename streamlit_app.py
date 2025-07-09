@@ -25,14 +25,18 @@ import streamlit as st
 GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY")
 
 #Step 1: Get JSON string from Streamlit secretes
-GOOGLE_APPLICATION_CREDENTIALS_JSON = st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"]
+creds_json_string = st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"]
 
-#Step 2: Writing it to a temporary file
-with open("/tmp/creds.json", "w") as f:
-    f.write(creds_json)
+#Step 1.5: Validating it is a JSON string
+creds_dict = json.loads(creds_json_string)
+
+#Step 2: Saving the credentials to a file
+creds_file_path = "/tmp/creds.json"
+with open(creds_file_path, "w") as f:
+    json.dump(creds_dict, f)
 
  #Step 3: Setting the environment variable for Google Cloud SDKs to use
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/creds.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = creds_file_path
 
 
 #Check if key is loaded
