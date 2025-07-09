@@ -23,7 +23,7 @@ from langgraph.prebuilt import ToolNode
 
 init(project="weighty-nation-463615-h5", location="us-central1")
 
-LOCATION = "global"
+LOCATION = "us-central1"
 LLM = "gemini-2.0-flash-001"
 
 
