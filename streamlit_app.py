@@ -13,6 +13,7 @@
 # limitations under the License.
 
 # mypy: disable-error-code="arg-type"
+import os
 import json
 import uuid
 from collections.abc import Sequence
@@ -23,8 +24,16 @@ import streamlit as st
 
 GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY")
 
-#Get JSON string from Streamlit secretes
+#Step 1: Get JSON string from Streamlit secretes
 GOOGLE_APPLICATION_CREDENTIALS_JSON = st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"]
+
+#Step 2: Writing it to a temporary file
+with open("/tmp/creds.json", "w") as f:
+	f.write(creds_json)
+
+ #Step 3: Setting the environment variable for Google Cloud SDKs to use
+ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/creds.json"
+
 
 #Check if key is loaded
 if not GOOGLE_API_KEY:
