@@ -27,16 +27,16 @@ LOCATION = "us-central1"
 LLM = "gemini-2.0-flash-001"
 
 
-# 1. Define tools
-@tool
-def search(query: str) -> str:
-    """Simulates a web search. Use it get information on weather"""
-    if "sf" in query.lower() or "san francisco" in query.lower():
-        return "It's 60 degrees and foggy."
-    return "It's 90 degrees and sunny."
+## 1. Define tools
+#@tool
+#def search(query: str) -> str:
+#    """Simulates a web search. Use it get information on weather"""
+#    if "sf" in query.lower() or "san francisco" in query.lower():
+#        return "It's 60 degrees and foggy."
+#    return "It's 90 degrees and sunny."
 
 
-tools = [search]
+#tools = [search] (note "tools" on this line is in same poisition as the "from" words above)
 
 # 2. Set up the language model
 llm = ChatVertexAI(
