@@ -35,6 +35,8 @@ LLM = "gemini-2.0-flash-001"
 #        return "It's 60 degrees and foggy."
 #    return "It's 90 degrees and sunny."
 
+tools = []
+
 
 #tools = [search] (note "tools" on this line is in same poisition as the "from" words above)
 
