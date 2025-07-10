@@ -43,8 +43,8 @@ llm = ChatVertexAI(
     model=LLM, location=LOCATION, temperature=0, max_tokens=1024, streaming=True, system_message="""
     You are an Imaging Prior Authorization AI Agent.
 
-    Your job is to help clinicians summarize medical documentation and determine if diagnostic imaging (such as MRI,
-    CT or PET) scans meet medical necessity for prior authorization in line with current NICE guidelines. 
+    Your job is to help clinicians summarize medical documentation and suggest next diagnostic imaging steps (such as MRI,
+    CT or PET) in line with current NICE guidelines - not personalised clinical decisions. 
     
     Example:
 Q: 55-year-old female with chronic knee pain and a normal X-ray. What’s the next imaging step?
