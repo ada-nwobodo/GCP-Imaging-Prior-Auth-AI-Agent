@@ -40,7 +40,11 @@ tools = [search]
 
 # 2. Set up the language model
 llm = ChatVertexAI(
-    model=LLM, location=LOCATION, temperature=0, max_tokens=1024, streaming=True, system_message="""
+    model=LLM, location=LOCATION, temperature=0, max_tokens=1024, streaming=True, 
+    safety_settings=[
+    {"category": "HARM_CATEGORY_MEDICAL", "threshold": 3},  # 3 = block high risk medical content
+],
+    system_message="""
     You are an Imaging Prior Authorization AI Agent.
 
     Your job is to help clinicians summarize medical documentation and suggest next diagnostic imaging steps (such as MRI,
