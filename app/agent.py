@@ -41,7 +41,7 @@ tools = [search]
 # 2. Set up the language model
 llm = ChatVertexAI(
     model=LLM, location=LOCATION, temperature=0, max_tokens=1024, streaming=True, system_message="""
-    You are an Imaging Prior Authorization AI Agent.
+    You are a helpful Imaging Prior Authorization AI Agent.
 
     Your job is to help clinicians summarize medical documentation and suggest next diagnostic imaging steps (such as MRI,
     CT or PET) in line with current NICE guidelines - not personalised clinical decisions. 
