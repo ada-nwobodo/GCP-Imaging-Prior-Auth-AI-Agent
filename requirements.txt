@@ -53,7 +53,7 @@ grpcio==1.71.0
 grpcio-status==1.71.0
 
 
-langchain-core==0.2.35
+langchain-core==0.1.27
 langchain-google-vertexai==0.1.0
 langgraph==0.5.1
 
